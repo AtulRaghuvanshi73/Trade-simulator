@@ -23,7 +23,9 @@ def serve_layout():
                             )
                         ])
                     ])
-                ])
+                ]),
+                html.Br(),
+                html.Div(id="connection-status", style={"color": "blue", "fontWeight": "bold"})
             ], width=4),
             dbc.Col([
                 dbc.Card([
@@ -38,7 +40,8 @@ def serve_layout():
                             dbc.Col(html.Div(id="net-cost-output"), width=6)
                         ]),
                         dcc.Graph(id="price-chart"),
-                        html.Div(id="latency-output")
+                        html.Div(id="latency-output"),
+                        html.Div(id="data-warning", style={"color": "red", "fontWeight": "bold"})
                     ])
                 ])
             ], width=8)
